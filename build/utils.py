@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 CACHE_DIR = Path("cache")
 
-GUROBI_REF_MAN_URL = urllib.parse.urlparse('https://www.gurobi.com/documentation/9.5/refman/')
+GUROBI_REF_MAN_URL = urllib.parse.urlparse('https://www.gurobi.com/documentation/10.0/refman/')
 DOC_REMOVE = [
     r"For examples of how to query or modify parameter values from our different APIs, refer to our Parameter Examples.",
     r"For examples of how to query or modify attributes, refer to our Attribute Examples.",
@@ -38,7 +38,7 @@ async def fetch_html(session: aiohttp.ClientSession, path: str):
     async with session.get(url) as res:
         print("GET", url, res.status)
         if res.status != 200:
-            raise Exception("bad request")
+            raise Exception(f"bad request: {res}")
         text = await res.text()
 
     cache_path.parent.mkdir(parents=True, exist_ok=True)
@@ -63,11 +63,12 @@ _DTYPES = {
 }
 
 async def fetch_parameter_data(session: aiohttp.ClientSession, name: str, path: str) -> dict:
+    print(path)
     doc = await fetch_html(session, path)
     soup = BeautifulSoup(doc, 'html.parser')
     replace_images_with_alt(soup)
 
-    table = soup.find("table")
+    table = soup.find(string="Type:").parent.parent.parent.parent
     data = {"name": name, "url": get_url(path) }
 
     ty = table.find(string="Type:", recursive=True).parent.parent.find_next_sibling('td').text
@@ -103,7 +104,7 @@ async def fetch_attribute_data(session: aiohttp.ClientSession, name: str, path: 
     soup = BeautifulSoup(doc, 'html.parser')
     replace_images_with_alt(soup)
 
-    table = soup.find("table")
+    table = soup.find(string="Type:").parent.parent.parent.parent
     data = {"name": name, "url": get_url(path) }
 
     ty = table.find(string="Type:", recursive=True).parent.parent.find_next_sibling('td').text
