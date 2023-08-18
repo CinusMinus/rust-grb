@@ -2,7 +2,7 @@ use std::env;
 use std::fmt::{self, Display};
 use std::path::PathBuf;
 
-const LIB_NAME: &'static str = "gurobi";
+const LIB_NAME: &'static str = "gurobi1002";
 
 #[derive(Debug)]
 enum Error {
