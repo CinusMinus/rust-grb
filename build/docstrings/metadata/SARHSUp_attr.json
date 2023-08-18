@@ -1,6 +1,6 @@
 {
   "name": "SARHSUp",
-  "url": "https://www.gurobi.com/documentation/9.5/refman/sarhsup.html",
+  "url": "https://www.gurobi.com/documentation/10.0/refman/sarhsup.html",
   "dtype": "dbl",
   "otype": "constr",
   "modifiable": false

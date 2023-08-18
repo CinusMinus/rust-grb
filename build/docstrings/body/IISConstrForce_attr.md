@@ -1,4 +1,4 @@
-When computing an Irreducible Inconsistent Subsytem (IIS) for an infeasible model, indicates whether the linear
+When computing an Irreducible Inconsistent Subsystem (IIS) for an infeasible model, indicates whether the linear
 constraint should be included or excluded from the IIS.
 
 The default value of -1 lets the IIS algorithm decide.
@@ -14,3 +14,5 @@ this attribute to 1 may result in an IIS that is not irreducible. More precisely
 with respect to the model elements that have force values of -1 or 0.
 
 See the Model.computeIIS documentation for more details.
+
+This attribute is ignored for LPs.

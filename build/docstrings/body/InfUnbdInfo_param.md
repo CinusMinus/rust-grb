@@ -6,4 +6,4 @@ attributes).
 Note that if a model is found to be either infeasible or unbounded, and you simply want to know which one it is, you
 should use the `DualReductions` parameter instead. It performs much less additional computation.
 
-Note: LP only
+Note: Only affects linear programming (LP) models

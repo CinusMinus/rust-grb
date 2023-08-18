@@ -1,4 +1,4 @@
-When computing an Irreducible Inconsistent Subsytem (IIS) for an infeasible model, indicates whether the SOS constraint
+When computing an Irreducible Inconsistent Subsystem (IIS) for an infeasible model, indicates whether the SOS constraint
 should be included or excluded from the IIS.
 
 The default value of -1 lets the IIS algorithm decide.

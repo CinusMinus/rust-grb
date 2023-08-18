@@ -4,8 +4,8 @@ There are several diffent ways to perform this reformulation; they differ in the
 reformulations add fewer variables and constraints to the model. Stronger reformulations reduce the number of branch-
 and-cut nodes required to solve the resulting model.
 
-Options 0 and 1 of this parameter encode an SOS2 constraint using a formulation whose size is linear in the the number
-of SOS members. Option 0 uses a so-called multiple choice model. It usually produces an LP relaxation that is easier to
+Options 0 and 1 of this parameter encode an SOS2 constraint using a formulation whose size is linear in the number of
+SOS members. Option 0 uses a so-called multiple choice model. It usually produces an LP relaxation that is easier to
 solve. Option 1 uses an incremental model. It often gives a stronger representation, reducing the amount of branching
 required to solve harder problems.
 

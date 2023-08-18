@@ -5,7 +5,7 @@ Note that if the group is not specified, the job may run on any node. If there a
 specified groups, the job will be rejected.
 
 Refer to the Gurobi Remote Services Reference Manual for more information on starting Compute Server jobs and in
-particular to Gurobi Remote Services cluster Grouping for more information on grouping cluster nodes.
+particular to Gurobi Remote Services Cluster Grouping for more information on grouping cluster nodes.
 
 You must set this parameter through either a license file (using GROUP=name) or an empty environment. Changing the
 parameter after your environment has been created will have no effect.

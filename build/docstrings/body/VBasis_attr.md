@@ -4,4 +4,4 @@ set basis status information for all constraints and variables in the model. Onl
 
 Note that if you provide a valid starting extreme point, either through PStart, DStart, or through VBasis, CBasis, then
 LP presolve will be disabled by default. For models where presolve greatly reduces the problem size, this might hurt
-performance. To allow presolve, it needs to set parameter LPWarmStart to 2.
+performance. For presolve to be enabled, the parameter LPWarmStart must be set to 2.

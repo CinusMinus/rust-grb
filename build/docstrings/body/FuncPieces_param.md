@@ -5,6 +5,8 @@ are a few options:
 
 `FuncPieces` = 1: Uses a fixed width for each piece; the actual width is provided in the `FuncPieceLength` parameter.
 
+`FuncPieces` = 0: Default value; chooses automatically.
+
 `FuncPieces` = -1: Bounds the absolute error of the approximation; the error bound is provided in the `FuncPieceError`
 parameter.
 

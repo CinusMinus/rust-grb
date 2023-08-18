@@ -2,11 +2,11 @@ The constraint dual value in the current solution (also known as the shadow pric
 
 Given a linear programming problem
 
-$\begin{array}{ll} \mathrm{minimize} & c'x \\ \mathrm{subject\ to} & Ax \ge b \\ & x \ge 0 \end{array}$
+$\begin{array}{ll} \mathrm{minimize} & c'x \ \mathrm{subject\ to} & Ax \ge b \ & x \ge 0 \end{array}$
 
 and a corresponding dual problem
 
-$\begin{array}{ll} \mathrm{maximize} & b'y \\ \mathrm{subject\ to} & A'y \le c \\ & y \ge 0 \end{array}$
+$\begin{array}{ll} \mathrm{maximize} & b'y \ \mathrm{subject\ to} & A'y \le c \ & y \ge 0 \end{array}$
 
 the `Pi` attribute returns $y$.
 
