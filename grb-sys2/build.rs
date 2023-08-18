@@ -48,7 +48,7 @@ fn try_gurobi_home() -> Result<PathBuf, Error> {
 fn main() {
   match try_gurobi_home() {
     Ok(path) => println!("cargo:rustc-link-search=native={}", path.display()),
-    Err(Error::GurobiHomeNotGiven) => eprintln!("GUROBI_HOME env var not set"),
+    Err(Error::GurobiHomeNotGiven) => println!("cargo:warning=GUROBI_HOME env var not set"),
     Err(e) => println!("cargo:warning={}", e)
   }
   println!("cargo:rustc-link-lib=dylib={}", LIB_NAME);
